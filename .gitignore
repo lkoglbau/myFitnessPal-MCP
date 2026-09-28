@@ -1,0 +1,11 @@
+# Python / uv
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Zugangsdaten – NIEMALS committen!
+mfp-cookies.txt
+cookies*.txt
+*cookies*.txt
+.env

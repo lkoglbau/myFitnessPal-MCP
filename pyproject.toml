@@ -1,0 +1,24 @@
+[project]
+name = "myfitnesspal-mcp"
+version = "0.1.0"
+description = "Nur-Lese-MCP-Server für MyFitnessPal (Tagebuch, Nährwerte, Gewicht, Training)"
+requires-python = ">=3.12"
+dependencies = [
+    "anyio>=4",
+    "browser-cookie3>=0.19",
+    # Auf <2 gepinnt: in mcp 2.x wurde FastMCP umbenannt, der Code würde brechen.
+    "mcp[cli]>=1.2,<2",
+    "myfitnesspal>=2.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
